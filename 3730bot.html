@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th> Placa </th>
+            <th> Data da Corrida </th>
+            <th> Quantidade de Amostras </th>
+            <th> Pesquisador </th>
+            <th> CPF </th>
+            <th> Instituição </th>
+            <th> Fone </th>
+            <th> e-mail </th>
+            <th> Dados para NF </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{record.0}}</td>
+            <td>{{record.7}}</td>
+            <td>{{record.8}}</td>
+            <td>{{record.1}}</td>
+            <td>{{record.2}}</td>
+            <td>{{record.3}}</td>
+            <td>{{record.4}}</td>
+            <td>{{record.5}}</td>
+            <td>{{record.6}}</td>
+         </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
