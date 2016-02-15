@@ -10,7 +10,5 @@ def cpf_formatter(cpf):
     return ''.join(cpf)
     
 def ip_validate(ip):
-    ip = re.search('177\.8\.106\.', ip)
-    if ip:
-     return True
-    return False
+    is_internal_ip = re.search('177\.8\.106\.', ip)
+    return bool(is_internal_ip)
